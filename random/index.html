@@ -4,101 +4,71 @@
         <title>Random Quote Machine</title>
         <link rel=stylesheet type="text/css" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-         <script src="script.js"></script>
-        <script>
-$(document).ready(function(){
-   
-    var rnum;
-    
-    
-   var prev= -1;
-    
-     rnum = randomQuoteNumber();
-     $(".rtext").fadeOut("slow",function(){
-                $(".rtext").html(quotes[rnum].text);
-               
-            });
-            
-             $(".rwhos").fadeOut("slow",function(){
-                    $(".rwhos").html( '-' + quotes[rnum].arthor);    
-            });
-
-            $(".rtext").fadeIn();
-            $(".rwhos").fadeIn();
-            $("#twt").prop("href","https://twitter.com/intent/tweet?text=" + '"' + quotes[rnum].text + '" --' + quotes[rnum].arthor);
-           
-    
-    $("#beg").click(function(){
-      
-                    rnum = randomQuoteNumber();
-    
-      
-     
-            $(".rtext").fadeOut("slow",function(){
-                $(".rtext").html(quotes[rnum].text);
-               
-            });
-            
-             $(".rwhos").fadeOut("slow",function(){
-                    $(".rwhos").html( '-' + quotes[rnum].arthor);    
-            });
-
-            $(".rtext").fadeIn();
-            $(".rwhos").fadeIn();
-            $("#twt").prop("href","https://twitter.com/intent/tweet?text=" + '"' + quotes[rnum].text + '" --' + quotes[rnum].arthor);
-           
-   
-     
-       
-          }); 
-       
-    });
-
-       
-            
-        </script>
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            $(document).ready(function(){
+                var rnum;
+                
+                //=============================== Get random quote and author =================== //
+                rnum = randomQuoteNumber();
+                
+                $("#randText").fadeOut("slow",function(){
+                    $("#randText").html(quotes[rnum].text);
+               });
+            
+                $(".author").fadeOut("slow",function(){
+                    $(".author").html( '-' + quotes[rnum].arthor);    
+               });
+                //===============================================================================//
+                
+                //===================================== Show them ==============================//
+                $("#randText").fadeIn();
+                $(".author").fadeIn();
+                
+                //Tweet the Quote.
+                $("#twt").prop("href","https://twitter.com/intent/tweet?text=" + '"' + quotes[rnum].text + '" --' + quotes[rnum].arthor);
+                //===============================================================================//
+                
+                
+                 //================================== Do the same when I click the "New Quote" Button ==========//
+                $("#beg").click(function(){
+                   
+                    rnum = randomQuoteNumber();
+                    $("#randText").fadeOut("slow",function(){
+                        $("#randText").html(quotes[rnum].text);
+                    });
+                    
+                    $(".author").fadeOut("slow",function(){
+                        $(".author").html( '-' + quotes[rnum].arthor);    
+                    });
+
+                $("#randText").fadeIn();
+                $(".author").fadeIn();
+                $("#twt").prop("href","https://twitter.com/intent/tweet?text=" + '"' + quotes[rnum].text + '" --' + quotes[rnum].arthor);
+                    //========================================//
+            }); 
+        });
+        </script>
     </head>
     
-    <body>
+    <body style="background-color: #8FBC8F;">
         <div class="wrapper">
             <section  class="quote">
-                <div class="rtext"> --
-                 
-                </div>
-               <p class="rwhos">--</p>
+                <div id="randText" style="font-family: cursive;">--</div>
+                <p class="author">--</p>
             </section>
             
             <section class="control">
-                
-                <a id="twt" target="_blank" href="#"   class="tter fa fa-twitter"></a>
-                
-                <a style="float:right; " class="nquote" href="#" id="beg">New Quote</a>
-            
+                <a class="tter fa fa-twitter" id="twt" target="_blank" href="#"></a>
+                <a class="nquote" id="beg" href="#" >New Quote</a>
             </section>
             
-   
-            
-            
-            
-            
-           
-        <footer>
-            <p >Coded by ChriZerv.</p>    
-        </footer>
-        
-        
-        </div>
-        
-        
-        
+            <footer>
+                <p>Coded by <a href="https://www.freecodecamp.com/chrizerv" target="_blank" style="color:#8FBC8F">ChriZerv</a>.</p>    
+            </footer>
+        </div> <!-------------- Wrapper ends -->
     </body>
-
-
-
-
-
 </html>

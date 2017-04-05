@@ -1,122 +1,4 @@
-html,body{
-   
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-body{
-     background-color: #8FBC8F;
-}
-.wrapper{
-   min-height:100%;
-   position:relative;
-    overflow: hidden;
-      
-}
-
-
-.quote{
-    padding:20px;
-    background-color: #698B69;
-    width: 500px;
-    margin:auto;
-    overflow: hidden;
-    margin-top:10%;
-    border-radius: 1px;
-
- 
-}
-
-.rtext{
-    font-family: cursive;
-   
-}
-
-.rwhos{
-    float:right;
- 
-     font-family: monospace;
-
-     color:azure;
-}
-
-.control{
-  
-    background-color: #2F4F4F;
-    width: 200px;
-    border-radius: 10px;
-    margin:auto;
-    margin-top:10%;
-    padding:20px;
-
-}
-
-
-
-a.nquote{
-    text-decoration: none;
-  
-    padding:5px;
-    border:2px solid #483D8B;
-    background-color: #8FBC8F;
-    
-}
- a:link.nquote  {
-    color:#483D8B;
-}
-
- a:visited.nquote {
-    color:#483D8B;
-}
-
-a:hover.nquote {
-    background-color: #698B69;
-    color:azure;
-}
-
-a:active.nquote {
-    background-color: azure;
-    color:blue;
-}
-
-a.tter{
-    font-size:20px;
-    color:blue;
-    text-decoration: none;
-    background-color:azure;
-    padding: 6px;
-    border-radius:50%;
-}
-
-
-
-a:hover.tter {
-    background-color: blue;
-    color:azure;
-}
-a:active.tter {
-    background-color: blue;
-    color:azure;
-}
-
-
-
-
-
-
-footer{
-    
-   background-color: #483D8B;
- position:absolute;
-		bottom:0;
-    left:0;
-		width:100%;
-    text-align: center;
-     color:azure;
-  
-}
-
-
+/* ---------------------------------- Mediaa ----------------------- */
 @media only screen and (max-width: 550px)
 {
     .quote{
@@ -132,5 +14,107 @@ footer{
         margin-top:30%
     }
 }
+/* --------------------------------------- */
+
+
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+   min-height:100%;
+   position:relative;
+   overflow: hidden;
+}
+
+.quote{
+    padding:20px;
+    background-color: #698B69;
+    width: 500px;
+    margin:auto;
+    overflow: hidden;
+    margin-top:10%;
+    border-radius: 1px;
+}
+
+.author{
+    float:right;
+    font-family: monospace;
+    color:azure;
+}
+
+.control{
+    background-color: #2F4F4F;
+    width: 200px;
+    border-radius: 10px;
+    margin:auto;
+    margin-top:10%;
+    padding:20px;
+}
+
+
+/* ------------------------------ Twitter button --------------------- */
+a.tter{
+    font-size:20px;
+    color:blue;
+    text-decoration: none;
+    background-color:azure;
+    padding: 6px;
+    border-radius:50%;
+}
+
+a:hover.tter {
+    background-color: blue;
+    color:azure;
+}
+
+a:active.tter {
+    background-color: blue;
+    color:azure;
+}
+
+
+
+/* ------------------------------ New Quote button --------------------- */
+a.nquote{
+    text-decoration: none;
+    padding:5px;
+    border:2px solid #483D8B;
+    background-color: #8FBC8F;
+    float:right;
+}
+
+a:link.nquote  {
+    color:#483D8B;
+}
+
+a:visited.nquote {
+    color:#483D8B;
+}
+
+a:hover.nquote {
+    background-color: #698B69;
+    color:azure;
+}
+
+a:active.nquote {
+    background-color: azure;
+    color:blue;
+}
+
+footer{
+    background-color: #483D8B;
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    text-align: center;
+    color:azure;
+}
+
+
+
 
 

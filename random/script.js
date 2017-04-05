@@ -82,7 +82,7 @@ var quotes = [{"text" : "Difficulties are meant to rouse, not discourage. The hu
 
 var previous = -1;
 
-
+//Get a Random number from 0 - quote length. The number differs with the previous.
 function randomQuoteNumber() {
     "use strict";
     var num;
