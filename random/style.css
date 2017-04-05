@@ -1,20 +1,4 @@
-/* ---------------------------------- Mediaa ----------------------- */
-@media only screen and (max-width: 550px)
-{
-    .quote{
-       
-        width: 80%;
-         margin-top:20%
-    }
-}
 
-@media only screen and (min-height: 900px)
-{
-    .quote{
-        margin-top:30%
-    }
-}
-/* --------------------------------------- */
 
 
 html,body{
@@ -114,7 +98,23 @@ footer{
     color:azure;
 }
 
+/* ---------------------------------- Mediaa ----------------------- */
+@media only screen and (max-width: 550px)
+{
+    .quote{
+       
+        width: 80%;
+         margin-top:20%
+    }
+}
 
+@media only screen and (min-height: 900px)
+{
+    .quote{
+        margin-top:30%
+    }
+}
+/* --------------------------------------- */
 
 
 
