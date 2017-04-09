@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Local Weather App</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+             $(document).ready(function(){
+                 getGeoLocation();
+             });
+        </script>
+    </head>
+    <body>
+        
+        
+        <div class="wrapper">
+            <header class="head">
+                <h1>FreeCodeCamp</h1>
+                <h3>Local Weather app</h3>
+            </header>
+            <section class="weather">
+                <h2 id="location">--</h2>
+                <img  id="icon" src="#">
+                <h5 style="margin:0" id="desc">-----</h5>
+                <h4 id="centigrade">-----</h4>
+                <button id="flip" onclick="toogleCentigrate('f');">To &#8457;</button>
+            </section>
+            <div style="padding-bottom:90px"></div> <!-- Keep the footer a little bit away -->
+        <footer>
+            <p>Coded by <a href="https://www.freecodecamp.com/chrizerv" target="_blank" style="color:blue">ChriZerv</a>.</p>    
+        </footer>   
+        </div> <!------Wrapper Ends ------>
+        
+    </body>
+</html>
