@@ -1,0 +1,86 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+body{
+   background: -webkit-gradient(linear, left bottom, left top, from(chartreuse), to(white));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.wrapper{
+    position: relative;
+    min-height: 100%;
+   
+    width:100%;
+    overflow: auto;
+   
+}
+
+.searchbar{
+    
+    
+    text-align: center;
+    position: absolute;
+    left:50%;
+    margin-left: -172px;
+    top:50%;
+    margin-top: -92px;
+    margin-bottom: 30px;
+    width:342px;
+    height: 104;
+   
+    
+    
+}
+
+.entry{
+   
+    
+    width:80%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.entry pre{
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word; 
+}
+
+#results >a{
+    
+     width:80%;
+    box-shadow: 0px 0px 10px black;
+   
+   
+    text-decoration: none;
+    color:black;
+     margin: 20px auto;
+    display:block;
+}
+
+#results >a:link{
+   
+}
+
+#results  >a:hover{   
+    box-shadow: 0px 10px 10px black;
+}
+
+#results > a:active{
+   
+}
+
+footer{
+    position: absolute;
+    left:50%;
+    margin-left:-78px;
+   
+    bottom: 0;
+}
