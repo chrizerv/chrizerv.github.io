@@ -7,13 +7,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script>
-            var html = "";
-            var searchData;
+            var html = ""; //results of the search
+            var searchData; //what is going to be searched
             function start(){
                 $(".searchbar").css("top","100px");
                 $("#results").empty();
                 searchData = $("#search").val();
                
+                //api request
                 $.ajax( {
                     url: "https://en.wikipedia.org/w/api.php",
                 data:{
@@ -30,21 +31,13 @@
                     },
                     dataType: 'jsonp',
                     success: function(data) {
-                   // window.alert(JSON.stringify(data));
-                    for(x in data.query.pages)
-                        html += "<a href=\"" + data.query.pages[x].fullurl + "\"" + " target=\"_blank\"><div class=\"entry\"> " + "<h1>" + data.query.pages[x].title + "</h2>"  + data.query.pages[x].extract + "</div></a>";
-                    
-                    
-                    $("#results").html(html);
-                    html = "";
-                }
-            } );
-                
-                
-            
-                
-                
-               
+                        //for every result of wikimedia api, show a sentence of its content and the heading. Every entry has an anchor tag, which refers to the wiki website of the result
+                        for(x in data.query.pages)
+                            html += "<a href=\"" + data.query.pages[x].fullurl + "\"" + " target=\"_blank\"><div class=\"entry\"> " + "<h1>" + data.query.pages[x].title + "</h2>"  + data.query.pages[x].extract + "</div></a>";
+                        $("#results").html(html);
+                        html = "";
+                    }
+                });
             }
             
         </script>
@@ -54,14 +47,10 @@
             
             <section class="searchbar" >
                 <h1 style="text-align:center">WIKI SEARCHER</h1>
-                
                 <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><button>&#9856;</button></a><input id="search" type="text" name="search" placeholder="Search.."><button id="go"  onclick="start()">&#x1f50d;</button>
-               
             </section>
                 <div style="margin-bottom:120px"></div>
-                <section id="results">
-                    
-            </section>
+                <section id="results"></section>
             <div style="margin-bottom:80px"></div>
         <footer>
              <p>Coded by <a href="https://www.freecodecamp.com/chrizerv" target="_blank" style="color:blue">ChriZerv</a>.</p>  
